@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataSumViewController">
+            <connections>
+                <outlet property="balanceLabel" destination="B2d-kB-U1F" id="DCx-jK-0ZD"/>
+                <outlet property="balanceView" destination="Ka0-eu-m60" id="vQY-4R-bYy"/>
+                <outlet property="dataTable" destination="Y7P-CP-o4c" id="PVp-Rp-htC"/>
+                <outlet property="detailsBar" destination="Hzh-34-9zd" id="2C6-y0-V2p"/>
+                <outlet property="loadIndicator" destination="DCC-Kh-Ixh" id="i4d-kw-ipq"/>
+                <outlet property="navItem" destination="1HM-Mi-JYu" id="ytz-T8-wGv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvt-kq-nSN">
+                    <rect key="frame" x="0.0" y="20" width="390" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Balance" id="1HM-Mi-JYu">
+                            <barButtonItem key="rightBarButtonItem" title="Details" id="Hzh-34-9zd">
+                                <connections>
+                                    <action selector="onDetails:" destination="-1" id="DHG-0e-5yy"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y7P-CP-o4c" userLabel="dataTable">
+                    <rect key="frame" x="0.0" y="64" width="390" height="780"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ka0-eu-m60" userLabel="balanceView">
+                    <rect key="frame" x="0.0" y="64" width="390" height="780"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="checking..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2d-kB-U1F">
+                            <rect key="frame" x="95" y="470.66666666666663" width="200" height="20.333333333333314"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="dlA-M8-o4A"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggybank.png" translatesAutoresizingMaskIntoConstraints="NO" id="chG-DB-mQu">
+                            <rect key="frame" x="79.666666666666686" y="541" width="231" height="219"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="chG-DB-mQu" secondAttribute="centerX" id="D4D-y2-ycE"/>
+                        <constraint firstItem="chG-DB-mQu" firstAttribute="top" secondItem="B2d-kB-U1F" secondAttribute="bottom" constant="50" id="ckL-Qo-xNC"/>
+                        <constraint firstAttribute="centerX" secondItem="B2d-kB-U1F" secondAttribute="centerX" id="qYE-YW-ggF"/>
+                        <constraint firstAttribute="bottom" secondItem="chG-DB-mQu" secondAttribute="bottom" constant="20" id="u1s-Xd-K8T"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DCC-Kh-Ixh" userLabel="loadIndicator">
+                    <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ka0-eu-m60" firstAttribute="top" secondItem="zvt-kq-nSN" secondAttribute="bottom" id="2a8-r8-l5b"/>
+                <constraint firstAttribute="trailing" secondItem="zvt-kq-nSN" secondAttribute="trailing" id="2wn-Im-22c"/>
+                <constraint firstAttribute="bottom" secondItem="Y7P-CP-o4c" secondAttribute="bottom" id="7zG-Xv-faw"/>
+                <constraint firstItem="Ka0-eu-m60" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DSg-y2-hgM"/>
+                <constraint firstAttribute="trailing" secondItem="Y7P-CP-o4c" secondAttribute="trailing" id="Fts-7D-d0e"/>
+                <constraint firstItem="zvt-kq-nSN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="XRc-5p-E8X"/>
+                <constraint firstItem="zvt-kq-nSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hJY-Bs-XAk"/>
+                <constraint firstAttribute="bottom" secondItem="Ka0-eu-m60" secondAttribute="bottom" id="hh0-fN-uxY"/>
+                <constraint firstItem="zvt-kq-nSN" firstAttribute="bottom" secondItem="Y7P-CP-o4c" secondAttribute="top" id="kjT-il-CZT"/>
+                <constraint firstAttribute="centerX" secondItem="DCC-Kh-Ixh" secondAttribute="centerX" id="mqt-f6-nKR"/>
+                <constraint firstAttribute="trailing" secondItem="Ka0-eu-m60" secondAttribute="trailing" id="nKM-vK-rta"/>
+                <constraint firstAttribute="centerY" secondItem="DCC-Kh-Ixh" secondAttribute="centerY" id="njc-Ft-iec"/>
+                <constraint firstItem="Y7P-CP-o4c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="re9-qg-TSm"/>
+            </constraints>
+            <point key="canvasLocation" x="-17" y="-17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="piggybank.png" width="231" height="219"/>
+    </resources>
+</document>

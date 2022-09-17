@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupJoinViewController">
+            <connections>
+                <outlet property="joinButton" destination="nqh-1i-0wb" id="d9F-kr-3Er"/>
+                <outlet property="joinIndicator" destination="5D7-me-Q9J" id="dXi-HJ-sTU"/>
+                <outlet property="nameText" destination="cCA-0l-60P" id="tuo-X3-dat"/>
+                <outlet property="navItem" destination="cZ0-wQ-o2k" id="frY-ze-KA0"/>
+                <outlet property="passText" destination="nIz-Ae-GhA" id="Gie-tb-EAM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-wy-pWx">
+                    <rect key="frame" x="0.0" y="20" width="390" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Join Group" id="cZ0-wQ-o2k"/>
+                    </items>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk9-h7-zro">
+                    <rect key="frame" x="0.0" y="64" width="390" height="780"/>
+                    <subviews>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="5D7-me-Q9J" userLabel="joinIndicator">
+                            <rect key="frame" x="185" y="50" width="20" height="20"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </activityIndicatorView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Group name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCA-0l-60P" userLabel="nameText">
+                            <rect key="frame" x="20" y="90" width="350" height="30"/>
+                            <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Rzc-d6-oME"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Group password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nIz-Ae-GhA" userLabel="passText">
+                            <rect key="frame" x="20" y="140" width="350" height="30"/>
+                            <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="5Qi-LO-ces"/>
+                            </constraints>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-1i-0wb" userLabel="joinButton">
+                            <rect key="frame" x="20" y="190" width="350" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Join Group">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onJoin:" destination="-1" eventType="touchUpInside" id="4yP-Te-aZH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="5D7-me-Q9J" secondAttribute="centerX" id="1ag-Ug-nKh"/>
+                        <constraint firstItem="cCA-0l-60P" firstAttribute="top" secondItem="5D7-me-Q9J" secondAttribute="bottom" constant="20" id="8WJ-6F-LiY"/>
+                        <constraint firstItem="nIz-Ae-GhA" firstAttribute="leading" secondItem="mk9-h7-zro" secondAttribute="leading" constant="20" id="FPy-pF-18j"/>
+                        <constraint firstItem="nqh-1i-0wb" firstAttribute="top" secondItem="nIz-Ae-GhA" secondAttribute="bottom" constant="20" id="MOM-rG-uHL"/>
+                        <constraint firstAttribute="centerX" secondItem="cCA-0l-60P" secondAttribute="centerX" id="N5O-PD-2sL"/>
+                        <constraint firstItem="nIz-Ae-GhA" firstAttribute="top" secondItem="cCA-0l-60P" secondAttribute="bottom" constant="20" id="NA1-hI-lK8"/>
+                        <constraint firstAttribute="trailing" secondItem="cCA-0l-60P" secondAttribute="trailing" constant="20" id="Qgf-4n-iJz"/>
+                        <constraint firstItem="cCA-0l-60P" firstAttribute="leading" secondItem="mk9-h7-zro" secondAttribute="leading" constant="20" id="SAS-78-lbq"/>
+                        <constraint firstItem="nqh-1i-0wb" firstAttribute="leading" secondItem="mk9-h7-zro" secondAttribute="leading" constant="20" id="W53-mG-ZlP"/>
+                        <constraint firstAttribute="bottom" secondItem="nqh-1i-0wb" secondAttribute="bottom" constant="124" id="fRQ-y1-cNK"/>
+                        <constraint firstAttribute="trailing" secondItem="nIz-Ae-GhA" secondAttribute="trailing" constant="20" id="pay-bb-Ehy"/>
+                        <constraint firstItem="5D7-me-Q9J" firstAttribute="top" secondItem="mk9-h7-zro" secondAttribute="top" constant="50" id="vC0-pl-Fik"/>
+                        <constraint firstAttribute="trailing" secondItem="nqh-1i-0wb" secondAttribute="trailing" constant="20" id="ypN-tp-Z2n"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ejm-wy-pWx" secondAttribute="trailing" id="1Cf-So-S0a"/>
+                <constraint firstItem="mk9-h7-zro" firstAttribute="top" secondItem="ejm-wy-pWx" secondAttribute="bottom" id="1Xa-LY-Vjb"/>
+                <constraint firstAttribute="bottom" secondItem="mk9-h7-zro" secondAttribute="bottom" id="54S-0A-aRF"/>
+                <constraint firstAttribute="trailing" secondItem="mk9-h7-zro" secondAttribute="trailing" id="Xox-bs-jGB"/>
+                <constraint firstItem="ejm-wy-pWx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zr2-F2-AGO"/>
+                <constraint firstItem="ejm-wy-pWx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="aFi-6O-ZPA"/>
+                <constraint firstItem="mk9-h7-zro" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xve-VH-8Dt"/>
+            </constraints>
+            <point key="canvasLocation" x="-17" y="-17"/>
+        </view>
+    </objects>
+</document>
